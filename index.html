@@ -13,85 +13,105 @@
     <!--========================= CSS =============================-->
     <link rel="stylesheet" href="./styles/style.css" />
 
+    <!--========================= JS =============================-->
+    <script defer type="module" src="./scripts/main.js"></script>
+
     <title>ColorFun</title>
   </head>
+
   <body>
-    <!-- ========================= header =========================== -->
+    <!-- ========================= Header =========================== -->
     <header class="header">
-      <nav class="nav container">
-        <img class="nav__logo" src="assets/icon/colorFun.svg" alt="" />
-        <div class="nav__menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >Blog <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
+      <img
+        loading="lazy"
+        class="header__logo"
+        src="assets/icon/colorFun.svg"
+        alt=""
+      />
 
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >For children <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >For adults <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >Holidays <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >Interests <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >Educational <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
-
-            <li class="nav__item">
-              <a href="" class="nav__link"
-                >Contacts <img src="./assets/icon/arrow-down.svg" alt=""
-              /></a>
-            </li>
-
-            <!-- btn close -->
-            <button class="nav__close center">
-              <img src="./assets/icon/close.svg" alt="" />
-            </button>
-          </ul>
+      <div class="header__tools">
+        <div class="header__search">
+          <img
+            loading="lazy"
+            class="header__search-logo"
+            src="./assets/icon/search.svg"
+            alt="search logo"
+          />
+          <input type="text" />
+          <img
+            loading="lazy"
+            class="header__search-voice"
+            src="./assets/icon/voice.svg"
+            alt=""
+          />
         </div>
 
-        <div class="nav__tools">
-          <div class="nav__search">
-            <img
-              class="nav__search-logo"
-              src="./assets/icon/search.svg"
-              alt="search logo"
-            />
-            <input type="text" />
-            <img
-              class="nav__search-voice"
-              src="./assets/icon/voice.svg"
-              alt=""
-            />
-          </div>
-
-          <button class="nav__button center">
-            <img src="./assets/icon/menu.svg" alt="" />
-          </button>
-        </div>
-      </nav>
+        <button class="nav__open center">
+          <img loading="lazy" src="./assets/icon/menu.svg" alt="" />
+        </button>
+      </div>
     </header>
+
+    <!-- ========================= Navbar =========================== -->
+    <nav class="nav container">
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >Blog
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >For children
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >For adults
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >Holidays
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >Interests
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >Educational
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link"
+              >Contacts
+              <img loading="lazy" src="./assets/icon/arrow-down.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+
+        <!-- btn close -->
+        <button class="nav__close center">
+          <img loading="lazy" src="./assets/icon/close.svg" alt="" />
+        </button>
+      </div>
+    </nav>
 
     <!--============================= Main ===========================-->
     <main class="main container">
@@ -101,50 +121,50 @@
 
         <div class="coloring__container">
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             <figcaption class="coloring__name">Cute avocado</figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-2.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             <figcaption class="coloring__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-2.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             <figcaption class="coloring__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             <figcaption class="coloring__name">Cute avocado</figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             <figcaption class="coloring__name">Cute avocado</figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-2.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             <figcaption class="coloring__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-2.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             <figcaption class="coloring__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
           <figure class="coloring__data">
-            <img src="./assets/image/coloring-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             <figcaption class="coloring__name">Cute avocado</figcaption>
           </figure>
         </div>
@@ -157,7 +177,7 @@
 
         <div class="article__container">
           <figure class="article__data">
-            <img src="./assets/image/article-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -171,12 +191,12 @@
             </p>
 
             <button class="article__open">
-              <img src="./assets/icon/arrow-right.svg" alt="" />
+              <img loading="lazy" src="./assets/icon/arrow-right.svg" alt="" />
             </button>
           </figure>
 
           <figure class="article__data">
-            <img src="./assets/image/article-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -190,12 +210,12 @@
             </p>
 
             <button class="article__open">
-              <img src="./assets/icon/arrow-right.svg" alt="" />
+              <img loading="lazy" src="./assets/icon/arrow-right.svg" alt="" />
             </button>
           </figure>
 
           <figure class="article__data">
-            <img src="./assets/image/article-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -209,12 +229,12 @@
             </p>
 
             <button class="article__open">
-              <img src="./assets/icon/arrow-right.svg" alt="" />
+              <img loading="lazy" src="./assets/icon/arrow-right.svg" alt="" />
             </button>
           </figure>
 
           <figure class="article__data">
-            <img src="./assets/image/article-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -228,12 +248,12 @@
             </p>
 
             <button class="article__open">
-              <img src="./assets/icon/arrow-right.svg" alt="" />
+              <img loading="lazy" src="./assets/icon/arrow-right.svg" alt="" />
             </button>
           </figure>
 
           <figure class="article__data">
-            <img src="./assets/image/article-1.svg" alt="" />
+            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -247,7 +267,7 @@
             </p>
 
             <button class="article__open">
-              <img src="./assets/icon/arrow-right.svg" alt="" />
+              <img loading="lazy" src="./assets/icon/arrow-right.svg" alt="" />
             </button>
           </figure>
         </div>
@@ -272,22 +292,38 @@
             <div class="category__info">
               <figure class="category__data">
                 <figcaption class="category__name">Cartoons</figcaption>
-                <img src="./assets//image/cat-cartoon.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets//image/cat-cartoon.svg"
+                  alt=""
+                />
               </figure>
 
               <figure class="category__data">
                 <figcaption class="category__name">Nature</figcaption>
-                <img src="./assets/image/cat-nature.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-nature.svg"
+                  alt=""
+                />
               </figure>
 
               <figure class="category__data">
                 <figcaption class="category__name">Video games</figcaption>
-                <img src="./assets/image/cat-videoGame.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-videoGame.svg"
+                  alt=""
+                />
               </figure>
 
               <figure class="category__data">
                 <figcaption class="category__name">Animals</figcaption>
-                <img src="./assets/image/cat-animal.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-animal.svg"
+                  alt=""
+                />
               </figure>
             </div>
           </div>
@@ -298,22 +334,38 @@
             <div class="category__info">
               <figure class="category__data">
                 <figcaption class="category__name">Christmas</figcaption>
-                <img src="./assets/image/cat-christmas.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-christmas.svg"
+                  alt=""
+                />
               </figure>
 
               <figure class="category__data">
                 <figcaption class="category__name">New Year</figcaption>
-                <img src="./assets/image/cat-newYear.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-newYear.svg"
+                  alt=""
+                />
               </figure>
 
               <figure class="category__data">
                 <figcaption class="category__name">Halloween</figcaption>
-                <img src="./assets/image/cat-halloween.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-halloween.svg"
+                  alt=""
+                />
               </figure>
 
               <figure class="category__data">
                 <figcaption class="category__name">Valentine's Day</figcaption>
-                <img src="./assets/image/cat-valentine.svg" alt="" />
+                <img
+                  loading="lazy"
+                  src="./assets/image/cat-valentine.svg"
+                  alt=""
+                />
               </figure>
             </div>
           </div>
@@ -326,11 +378,11 @@
       <div class="footer__shape"></div>
       <div class="footer__container section">
         <div class="footer__content">
-          <img src="./assets/icon/colorFun.svg" alt="" />
+          <img loading="lazy" src="./assets/icon/colorFun.svg" alt="" />
           <p class="footer__copy">© 2024 ColorFun.ru</p>
           <div class="footer__social">
-            <img src="./assets/icon/social-tg.svg" alt="" />
-            <img src="./assets/icon/social-vk.svg" alt="" />
+            <img loading="lazy" src="./assets/icon/social-tg.svg" alt="" />
+            <img loading="lazy" src="./assets/icon/social-vk.svg" alt="" />
           </div>
         </div>
         <p class="footer__note">
@@ -342,5 +394,8 @@
         </p>
       </div>
     </footer>
+
+    <!-- overlay / backdrop -->
+    <div class="overlay hidden"></div>
   </body>
 </html>

@@ -8,6 +8,7 @@
   --text-color: hsl(207, 4%, 28%);
   --text-color-light: hsl(207, 4%, 56%);
   --container-color: hsl(207, 4%, 95%);
+  --overlay-color: rgba(53, 48, 66, 0.5);
 
   /*  ================== Fonts and typography ====================  */
   --body-font: 'Roboto', sans-serif;
@@ -126,37 +127,72 @@ input:focus {
   overflow: hidden; /* for aimations */
 }
 
-/* ===================== Header & Nav ======================= */
+/* ===================== Header ======================= */
 .header {
   width: 100%;
   position: fixed;
-  z-index: 100;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  z-index: 20;
   background-color: var(--white-color);
+  padding-bottom: .5rem;
+  /* box-shadow: ; */
+  box-shadow: 0 0 10px -3px var(--first-color);
 }
 
-.nav {
+.header__logo {
+  width: 30%;
+  max-width: 200px;
+  margin-block: 0.6rem;
+}
+
+.header__tools {
+  display: flex;
+  align-items: center;
+}
+
+.header__search {
+  border: 1px solid var(--second-color);
+  height: 32px;
+  display: flex;
+  border-radius: 40px;
+  padding-inline: 10px;
+  margin-right: 10px;
+}
+
+.header__search input {
+  font-size: 100%;
+  border: none;
+  padding-inline: 10px;
+}
+
+/* ===================== Navbar ======================= */
+.nav{
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
 }
 
-.nav__logo {
-  width: 30%;
-  max-width: 200px;
-  margin-block: 0.6rem;
-}
-
 .nav__menu {
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
+  height: 100vh;
   right: -100%; /* js */
   padding-top: 90px;
   z-index: 10;
   background-color: var(--white-color);
   width: 75%;
-  border: 1px solid;
   border-radius: 20px 0 0 20px;
+  transition: right .5s;
+  border: 1px solid var(--first-color);
+  z-index: 100;
+}
+
+.show-menu{
+  right: 0;
 }
 
 .nav__list {
@@ -188,34 +224,16 @@ input:focus {
   height: 32px;
   padding: 6px 3px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
-.nav__tools {
-  display: flex;
-  align-items: center;
-}
-
-.nav__search {
-  border: 1px solid var(--second-color);
-  height: 32px;
-  display: flex;
-  border-radius: 40px;
-  padding-inline: 10px;
-  margin-right: 10px;
-}
-
-.nav__search input {
-  font-size: 100%;
-  border: none;
-  padding-inline: 10px;
-}
-
-.nav__button {
+.nav__open {
   width: 32px;
   height: 32px;
   padding: 3px 1.5px;
   border-radius: 8px;
   background-color: var(--first-color);
+  cursor: pointer;
 }
 
 /*========================= Coloring ==========================*/
@@ -402,4 +420,17 @@ input:focus {
 
 .footer__note {
   font-size: var(--small-font-size);
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--overlay-color);
+  z-index: 30;
+}
+
+.hidden{
+  display: none;
 }

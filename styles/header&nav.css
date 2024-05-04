@@ -1,0 +1,117 @@
+/* ===================== Header ======================= */
+.header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  z-index: 20;
+  background-color: var(--white-color);
+  padding-bottom: .5rem;
+  box-shadow: 0 0 10px -3px var(--first-color);
+}
+
+.header__logo {
+  width: 30%;
+  max-width: 200px;
+  margin-block: 0.6rem;
+}
+
+.header__tools {
+  display: flex;
+  align-items: center;
+}
+
+.header__search {
+  border: 1px solid var(--second-color);
+  height: 32px;
+  display: flex;
+  border-radius: 40px;
+  padding-inline: 10px;
+  margin-right: 10px;
+}
+
+.header__search input {
+  font-size: 100%;
+  border: none;
+  padding-inline: 10px;
+  width: 100%;
+}
+
+/* ===================== Navbar ======================= */
+.nav{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  right: -100%; /* js */
+  padding-top: 90px;
+  z-index: 10;
+  background-color: var(--white-color);
+  width: 75%;
+  border-radius: 20px 0 0 20px;
+  transition: right .5s;
+  border: 1px solid var(--first-color);
+  z-index: 100;
+}
+
+.show-menu{
+  right: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-flow: column wrap;
+  padding-inline: 10px;
+}
+
+.nav__item {
+  border-bottom: 1px solid var(--second-color);
+  padding-bottom: 0.5rem;
+}
+
+.nav__link {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.nav__close {
+  position: absolute;
+  background-color: var(--first-color);
+  top: 40px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 6px 3px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav__open {
+  width: 32px;
+  height: 32px;
+  padding: 3px 1.5px;
+  border-radius: 8px;
+  background-color: var(--first-color);
+  cursor: pointer;
+}
+
+.main{
+  padding-top: 8rem;
+}
+
+.tags{
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+}

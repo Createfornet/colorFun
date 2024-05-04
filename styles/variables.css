@@ -1,0 +1,48 @@
+:root {
+  /*  ========================== Colors ==========================  */
+  --first-color: #5c25c5;
+  --second-color: #c5a7eb;
+  --third-color: #136C31;
+  --body-color: #f6f2ff;
+  --white-color: #ffffff;
+  --title-color: hsl(207, 4%, 16%);
+  --text-color: hsl(207, 4%, 28%);
+  --text-color-light: hsl(207, 4%, 56%);
+  --container-color: hsl(207, 4%, 95%);
+  --overlay-color: rgba(53, 48, 66, 0.5);
+
+  /*  ================== Fonts and typography ====================  */
+  --body-font: 'Roboto', sans-serif;
+  --title-font: 'Lora', serif;
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /*  ====================== Font weight =======================  */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*  ======================== z index =========================  */
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*  ================= Responsive typography ==================  */
+@media screen and (min-with: 1024px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.688rem;
+  }
+}

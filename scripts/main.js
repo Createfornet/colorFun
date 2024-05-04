@@ -16,10 +16,10 @@ btnCloseMenu.addEventListener('click', function () {
 
 // mondaymandala
 
-const category = document.querySelector('.category__data')
+const categories = document.querySelectorAll('.category__data');
 
-console.log(category);
-
-category.addEventListener('click', function(){
-  window.location = ('./../public/all-category.html') 
-})
+categories.forEach(category =>
+  category.addEventListener('click', function () {
+    window.location.href = './public/all-category.html';
+  })
+);

@@ -20,7 +20,7 @@
 }
 
 .section {
-  padding: 2.5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .section__title,
@@ -42,21 +42,20 @@
 }
 
 .main {
-  overflow: hidden; /* for aimations */
+  overflow: hidden;
 }
 
 /*========================= Coloring ==========================*/
 .coloring {
-  margin-top: 5rem;
   background-color: var(--body-color);
-  padding: 2.5rem 0 0;
+  padding-bottom: 0;
 }
 
 .coloring__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
-  padding: 0 1rem 2rem;
+  padding-bottom: 2rem;
 }
 
 .coloring__data {
@@ -66,7 +65,22 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
+}
+
+.coloring__blob{
+  width: 90%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+
+.coloring__blob img{
+  height: 100%;
 }
 
 .coloring__name {

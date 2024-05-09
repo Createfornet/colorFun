@@ -1,0 +1,97 @@
+@import './variables.css';
+@import './base.css';
+@import './header&nav.css';
+
+/*  =============== Reusable CSS Classes ================  */
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  padding: 2.5rem 1rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.section__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 3rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+
+/* ===================== Category ======================= */
+.category__content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.category__data{
+  display: flex;
+  flex-flow: column wrap;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--first-color);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+.category__blob{
+  width: 100%;
+  height: 150px;
+  border: 1px solid var(--first-color);
+  margin-bottom: .5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category__blob img{
+  width: 100%;
+  transform: scale(1.1);
+}
+
+.category__more{
+  width: 170px;
+  background-color: transparent;
+  border: 1px solid var(--first-color);
+  border-radius: 50px;
+  padding: 8px 17px;
+  display: block;
+  margin: 2rem auto;
+  text-align: center;
+  transition: all .1s;
+}
+
+.category__more:hover{
+  color: var(--white-color);
+  background-color: var(--first-color);
+}

@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!-- ========================= Header =========================== -->
-    <link rel="stylesheet" href="./../styles/all-ategory.css" />
+    <link rel="stylesheet" href="./../styles/all-category.css" />
 
     <!-- ========================= Header =========================== -->
     <script defer src="./../scripts/main.js"></script>
@@ -27,23 +32,13 @@
 
       <div class="header__tools">
         <div class="header__search">
-          <img
-            loading="lazy"
-            class="header__search-logo"
-            src="./../assets/icon/search.svg"
-            alt="search logo"
-          />
+          <i class="ri-search-line"></i>
           <input type="text" />
-          <img
-            loading="lazy"
-            class="header__search-voice"
-            src="./../assets/icon/voice.svg"
-            alt=""
-          />
+          <i class="ri-mic-2-line"></i>
         </div>
 
         <button class="nav__open center">
-          <img loading="lazy" src="./../assets/icon/menu.svg" alt="" />
+          <i class="ri-menu-line"></i>
         </button>
       </div>
     </header>
@@ -54,57 +49,50 @@
         <ul class="nav__list">
           <li class="nav__item">
             <a href="" class="nav__link"
-              >Blog
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >Blog <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
 
           <li class="nav__item">
             <a href="" class="nav__link"
-              >For children
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >For children <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
 
           <li class="nav__item">
             <a href="" class="nav__link"
-              >For adults
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >For adults <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
 
           <li class="nav__item">
             <a href="" class="nav__link"
-              >Holidays
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >Holidays <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
 
           <li class="nav__item">
             <a href="" class="nav__link"
-              >Interests
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >Interests <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
 
           <li class="nav__item">
             <a href="" class="nav__link"
-              >Educational
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >Educational <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
 
           <li class="nav__item">
             <a href="" class="nav__link"
-              >Contacts
-              <img loading="lazy" src="./../assets/icon/arrow-down.svg" alt=""
-            /></a>
+              >Contacts <i class="ri-arrow-down-s-line"></i
+            ></a>
           </li>
         </ul>
 
         <!-- btn close -->
         <button class="nav__close center">
-          <img loading="lazy" src="./../assets/icon/close.svg" alt="" />
+          <i class="ri-close-line"></i>
         </button>
       </div>
     </nav>
@@ -114,85 +102,112 @@
       <h1 class="tags">Tags</h1>
       <!-- ========================= Children =========================== -->
       <section class="children section">
-        <div class="children__container">
-          <h2 class="section__title">For children</h2>
+        <div class="container">
+          <h2 class="category__title">For children</h2>
 
-          <div class="children__content">
-            <figure class="children__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="children__name">angry bird</figcaption>
+          <div class="category__content">
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__name">angry bird</figcaption>
             </figure>
-            <figure class="children__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="children__name">angry bird</figcaption>
+
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="children__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="children__name">angry bird</figcaption>
+
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="children__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="children__name">angry bird</figcaption>
+
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
           </div>
 
-          <button class="children__more">Show More</button>
+          <button class="category__more">Show More</button>
         </div>
       </section>
 
       <!-- ========================= Adult =========================== -->
-      <section class="adult section">
-        <div class="adult__container">
-          <h2 class="section__title">For adults</h2>
+      <section class="category__adult section">
+        <div class="category__container">
+          <h2 class="category__title">For adults</h2>
 
-          <div class="adult__content">
-            <figure class="adult__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="adult__name">angry bird</figcaption>
+          <div class="category__content">
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="adult__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="adult__name">angry bird</figcaption>
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="adult__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="adult__name">angry bird</figcaption>
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="adult__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="adult__name">angry bird</figcaption>
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
           </div>
 
-          <button class="adult__more">Show More</button>
+          <button class="category__more">Show More</button>
         </div>
       </section>
 
       <!-- ========================= Holiday =========================== -->
-      <section class="holiday section">
-        <div class="holiday__container">
-          <h2 class="section__title">For holidays</h2>
+      <section class="category__holiday section">
+        <div class="category__container">
+          <h2 class="category__title">For holidays</h2>
 
-          <div class="holiday__content">
-            <figure class="holiday__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="holiday__name">angry bird</figcaption>
+          <div class="category__content">
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="holiday__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="holiday__name">angry bird</figcaption>
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="holiday__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="holiday__name">angry bird</figcaption>
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
-            <figure class="holiday__data">
-              <img src="./../data/image/birds-1.jpg" alt="" />
-              <figcaption class="holiday__name">angry bird</figcaption>
+            <figure class="category__data">
+              <div class="category__blob">
+                <img loading="lazy" src="./../data/image/birds-1.jpg" alt="" />
+              </div>
+              <figcaption class="category__caption">angry bird</figcaption>
             </figure>
           </div>
 
-          <button class="holiday__more">Show More</button>
+          <button class="category__more">Show More</button>
         </div>
       </section>
     </main>

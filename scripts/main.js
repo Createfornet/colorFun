@@ -1,4 +1,6 @@
 // DOM Elements
+const header = document.querySelector('.header');
+const main = document.querySelector('.main');
 const btnOpenMenu = document.querySelector('.nav__open');
 const btnCloseMenu = document.querySelector('.nav__close');
 const menu = document.querySelector('.nav__menu');
@@ -23,3 +25,8 @@ categories.forEach(category =>
     window.location.href = './public/all-category.html';
   })
 );
+
+
+console.log(header.getBoundingClientRect().height);
+
+main.style.marginTop = header.getBoundingClientRect().height +'px'

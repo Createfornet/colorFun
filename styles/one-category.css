@@ -85,13 +85,14 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 3px solid var(--first-color);
+  border-bottom: 2px solid var(--first-color);
 }
 
 .category__detail span {
-  font-size: 1.1rem;
+  font-size: .5rem;
+  line-height: 30px;
   color: #333;
-  background-color: #eee;
+  background-color: #efefef;
   padding-inline: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -104,7 +105,7 @@
 .category__buttons button {
   width: 30px;
   height: 30px;
-  margin-inline: 2px;
+  margin-inline: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,13 +115,15 @@
 }
 
 .btn__download {
-  color: var(--first-color);
+  color: var(--white-color);
+  background-color: var(--first-color);
   transition: all 0.1s;
 }
 
 .btn__download:hover {
-  color: var(--white-color);
-  background-color: var(--first-color);
+  color: var(--first-color);
+  background-color: var(--white-color);
+  border: 2px solid var(--first-color);
 }
 
 .btn__see {
@@ -129,4 +132,15 @@
 
 .btn__like {
   color: red;
+}
+
+.category__load {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-block: .5rem;
+  border-radius: 1rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
 }

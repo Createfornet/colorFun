@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./../styles/one-category.css" />
 
 
-    <script defer src="./../scripts/category.js"></script>
+    <script defer type="module" src="./../scripts/category.js"></script>
   </head>
   <body>
     <!-- ========================= Header =========================== -->
@@ -114,7 +114,9 @@
           </p>
 
           <div class="category__content">
-            <figure class="category__data">
+
+            <!-- coloring card instance -->
+            <!-- <figure class="category__data">
               <div class="category__blob">
                 <img src="./../data/image/mario-4.jpg" alt="" />
               </div>
@@ -135,79 +137,13 @@
                 </div>
               </div>
               <figcaption>test</figcaption>
-            </figure>
+            </figure> -->
 
-            <figure class="category__data">
-              <div class="category__blob">
-                <img src="./../data/image/mario-4.jpg" alt="" />
-              </div>
-              <div class="category__detail">
-                <span>358 <i class="ri-download-line"></i></span>
-                <div class="category__buttons">
-                  <button title="download" class="btn__download">
-                    <i class="ri-arrow-down-line"></i>
-                  </button>
-
-                  <button title="see" class="btn__see">
-                    <i class="ri-eye-line"></i>
-                  </button>
-
-                  <button title="like" class="btn__like">
-                    <i class="ri-heart-3-line ri-heart-3-fill"></i>
-                  </button>
-                </div>
-              </div>
-              <figcaption>test</figcaption>
-            </figure>
-
-            <figure class="category__data">
-              <div class="category__blob">
-                <img src="./../data/image/mario-4.jpg" alt="" />
-              </div>
-              <div class="category__detail">
-                <span>358 <i class="ri-download-line"></i></span>
-                <div class="category__buttons">
-                  <button title="download" class="btn__download">
-                    <i class="ri-arrow-down-line"></i>
-                  </button>
-
-                  <button title="see" class="btn__see">
-                    <i class="ri-eye-line"></i>
-                  </button>
-
-                  <button title="like" class="btn__like">
-                    <i class="ri-heart-3-line"></i>
-                  </button>
-                </div>
-              </div>
-              <figcaption>test</figcaption>
-            </figure>
-
-            <figure class="category__data">
-              <div class="category__blob">
-                <img src="./../data/image/mario-4.jpg" alt="" />
-              </div>
-              <div class="category__detail">
-                <span>358 <i class="ri-download-line"></i></span>
-                <div class="category__buttons">
-                  <button title="download" class="btn__download">
-                    <i class="ri-arrow-down-line"></i>
-                  </button>
-
-                  <button title="see" class="btn__see">
-                    <i class="ri-eye-line"></i>
-                  </button>
-
-                  <button title="like" class="btn__like">
-                    <i class="ri-heart-3-line"></i>
-                  </button>
-                </div>
-              </div>
-              <figcaption>test</figcaption>
-            </figure>
           </div>
+          <button class="category__load">load more</button>
         </div>
       </section>
     </main>
+    <!-- <img src="./../assets/image/eye.png" class="eye" alt=""> -->
   </body>
 </html>

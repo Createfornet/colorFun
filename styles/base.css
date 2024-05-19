@@ -22,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-img {
+img, i {
   max-width: 100%;
   height: auto;
 }

@@ -17,10 +17,10 @@
     />
 
     <!--========================= CSS =============================-->
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
 
     <!--========================= JS =============================-->
-    <script defer type="module" src="./scripts/main.js"></script>
+    <script defer type="module" src="./scripts/home.js"></script>
 
     <title>ColorFun</title>
   </head>
@@ -35,17 +35,38 @@
         alt=""
       />
 
-      <div class="header__tools">
-        <div class="header__search">
-          <i class="ri-search-line"></i>
-          <input type="text" />
-          <i class="ri-mic-2-line"></i>
+      <div class="header__container">
+        <div class="header__tools">
+          <div class="header__search">
+            <div class="search-icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <input
+              class="header__search-bar"
+              placeholder="search"
+              type="text"
+            />
+            <div class="mic-icon">
+              <i class="ri-mic-2-line"></i>
+            </div>
+          </div>
+
+          <button class="nav__open center">
+            <i class="ri-menu-line"></i>
+          </button>
         </div>
 
-        <button class="nav__open center">
-          <i class="ri-menu-line"></i>
-        </button>
-      </div>
+        <!-- <div class="header__resaults">
+          <div class="header__resault">
+            <div class="search-icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <p class="resault-text">
+              Kolobok
+            </p>
+          </div>
+        </div>
+      </div> -->
     </header>
 
     <!-- ========================= Navbar =========================== -->
@@ -104,83 +125,83 @@
 
     <!--============================= Main ===========================-->
     <main class="main container">
-      <!--============================= Home ===========================-->
-      <section class="coloring section">
+      <!--============================= Popular ===========================-->
+      <section class="popular section">
         <h1 class="section__title">Popular and new coloring pages</h1>
 
-        <div class="coloring__container">
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+        <div class="popular__container">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">Cute avocado</figcaption>
+            <figcaption class="popular__name">Cute avocado</figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">
+            <figcaption class="popular__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">
+            <figcaption class="popular__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">Cute avocado</figcaption>
+            <figcaption class="popular__name">Cute avocado</figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">Cute avocado</figcaption>
+            <figcaption class="popular__name">Cute avocado</figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">
+            <figcaption class="popular__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-2.svg" alt="" />
             </div>
-            <figcaption class="coloring__name">
+            <figcaption class="popular__name">
               Albatross sea bird flying
             </figcaption>
           </figure>
 
-          <figure class="coloring__data">
-            <div class="coloring__blob">
+          <figure class="popular__data">
+            <div class="popular__blob">
               <img loading="lazy" src="./assets/image/coloring-1.svg" alt="" />
             </div>
 
-            <figcaption class="coloring__name">Cute avocado</figcaption>
+            <figcaption class="popular__name">Cute avocado</figcaption>
           </figure>
         </div>
-        <div class="coloring__shape"></div>
+        <div class="popular__shape"></div>
       </section>
 
       <!--============================= Article ===========================-->
@@ -189,7 +210,32 @@
 
         <div class="article__container">
           <figure class="article__data">
-            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            <div class="article__blob">
+              <img loading="lazy" src="./assets/image/article-1.sv" alt="" />
+            </div>
+
+            <figcaption>
+              <p class="article__title">
+                “Three Heroes and the Navel of the Earth” became the most
+                successful Russian cartoon in history
+              </p>
+
+              <p class="article__subtitle">
+                A unique trip along the OKAVANGO River, traveling on specially
+                equipped boats, accommodation in five-star tents, all the way
+                accompanied by a Russian-speaking guide.
+              </p>
+            </figcaption>
+
+            <button class="article__open center">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </figure>
+
+          <figure class="article__data">
+            <div class="article__blob">
+              <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            </div>
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -208,7 +254,9 @@
           </figure>
 
           <figure class="article__data">
-            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            <div class="article__blob">
+              <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            </div>
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -227,7 +275,9 @@
           </figure>
 
           <figure class="article__data">
-            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            <div class="article__blob">
+              <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            </div>
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most
@@ -246,26 +296,9 @@
           </figure>
 
           <figure class="article__data">
-            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
-
-            <figcaption class="article__title">
-              “Three Heroes and the Navel of the Earth” became the most
-              successful Russian cartoon in history
-            </figcaption>
-
-            <p class="article__subtitle">
-              A unique trip along the OKAVANGO River, traveling on specially
-              equipped boats, accommodation in five-star tents, all the way
-              accompanied by a Russian-speaking guide.
-            </p>
-
-            <button class="article__open center">
-              <i class="ri-arrow-right-line"></i>
-            </button>
-          </figure>
-
-          <figure class="article__data">
-            <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            <div class="article__blob">
+              <img loading="lazy" src="./assets/image/article-1.svg" alt="" />
+            </div>
 
             <figcaption class="article__title">
               “Three Heroes and the Navel of the Earth” became the most

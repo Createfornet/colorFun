@@ -1,3 +1,7 @@
+import headerBehavior from './header.js'
+
+new headerBehavior()
+
 const btnMore = document.querySelector('.category__more');
 const containerColoeing = document.querySelector('.content');
 

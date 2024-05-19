@@ -1,4 +1,7 @@
-'use strict';
+import headerBehavior from './header.js'
+
+new headerBehavior()
+
 
 // DOM Elements
 const header = document.querySelector('.header');
@@ -46,7 +49,7 @@ const createColoringCard = function (data) {
         </button>
       </div>
     </div>
-    <figcaption>${data.title}</figcaption>
+    <figcaption class="category__caption">${data.title}</figcaption>
   </figure>`;
 
   // add element to document

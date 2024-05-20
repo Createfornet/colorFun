@@ -8,7 +8,7 @@ const main = document.querySelector('.main');
 
 // mondaymandala
 
-const categories = document.querySelectorAll('.category__data');
+const categories = document.querySelectorAll('.category__item');
 
 categories.forEach(category =>
   category.addEventListener('click', function () {
@@ -18,4 +18,4 @@ categories.forEach(category =>
 
 console.log(header.getBoundingClientRect().height);
 
-main.style.marginTop = header.getBoundingClientRect().height + 'px';
+main.style.marginTop = header.getBoundingClientRect().height + 18 + 'px';

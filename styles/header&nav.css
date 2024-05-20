@@ -41,7 +41,7 @@
   margin-right: 10px;
 }
 
-.header__search-bar {
+.header__search-input {
   font-size: 100%;
   border: none;
   padding-inline: 5px;
@@ -63,9 +63,12 @@
 
 .header__resaults{
   width: 100%;
+  max-height: 10rem;
+  overflow-y: scroll;
 }
 
 .header__resault{
+  height: 2rem;
   display: flex;
   align-items: center;
   padding: .5rem;

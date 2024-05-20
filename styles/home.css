@@ -188,7 +188,8 @@
   justify-content: center;
 }
 .category__content {
-  margin-block: 1rem;
+  margin-block: 4rem;
+
 }
 .category__title {
   color: var(--first-color);
@@ -202,10 +203,11 @@
   margin: 1rem 0 2rem;
 }
 
-.category__data {
+.category__item {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .category__name {
@@ -213,9 +215,20 @@
   margin-bottom: 0.5rem;
 }
 
-.category__data img {
-  /* width: 100%; */
-  width: 400px;
+.category__blob{
+  border: 2px solid var(--first-color);
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category__blob img {
+  flex: 1 100%;
 }
 
 /*========================= Footer ==========================*/

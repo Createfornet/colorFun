@@ -1,6 +1,7 @@
 @import './variables.css';
 @import './base.css';
 @import './header&nav.css';
+@import './coloring-card.css';
 
 /*  =============== Reusable CSS Classes ================  */
 .container {
@@ -49,6 +50,7 @@
 .popular {
   background-color: var(--body-color);
   padding-bottom: 0;
+  padding-top: 3rem;
 }
 
 .popular__container {
@@ -98,9 +100,11 @@
 /*========================= Article ==========================*/
 
 .article__container {
+  height: 400px;
   display: flex;
+  align-items: flex-start;
   overflow-x: scroll;
-  position: relative;
+  overflow-y: hidden;
   padding: 0.5rem;
 }
 
@@ -111,23 +115,29 @@
   display: flex;
   width: 100px;
   flex-flow: column wrap;
+  background-color: var(--body-color);
+  padding-bottom: 1rem;
+  border-radius: 3rem 3rem .5rem .5rem;
 }
 
 .article__blob{
   width: 100%;
   aspect-ratio: 1.8 ;
   margin-bottom: 0.8rem;
-  border-radius: 2.5rem;
-  background-color: blueviolet;
+  border-radius: 3rem;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-.article__data img {
-  flex: 0 0 100%;
+.article__img {
+  flex: 100%;
 }
 
+.article__title,
+.article__subtitle{
+  padding-inline: .5rem;
+}
 .article__title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
@@ -209,6 +219,7 @@
 .category__name {
   font-size: var(--h3-font-size);
   margin-bottom: 0.5rem;
+  text-transform: capitalize;
 }
 
 .category__blob{

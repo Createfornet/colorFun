@@ -28,14 +28,14 @@ const createColoringCard = function (data) {
   // create element of coloring card
   // prettier-ignore
   const ElColoringCard = 
-  `<figure class="category__data" data-id ="${data.id}">
-    <div class="category__blob">
-      <img src="./../data/image/${data.name}.jpg" alt="" />
+  `<figure class="coloring__card" data-id ="${data.id}">
+    <div class="coloring__card-blob">
+      <img class="coloring__card-img" src="./../data/image/${data.name}.jpg" alt="" />
     </div>
 
-    <div class="category__detail">
+    <div class="coloring__card-detail">
       <span>${data.download} <i class="ri-download-line"></i></span>
-      <div class="category__buttons">
+      <div class="coloring__card-buttons">
         <button title="download" class="btn__download">
           <i class="ri-arrow-down-line"></i>
         </button>
@@ -49,10 +49,10 @@ const createColoringCard = function (data) {
         </button>
       </div>
     </div>
-    <figcaption class="category__caption">${data.title}</figcaption>
+    <figcaption class="coloring__card-caption">${data.title}</figcaption>
   </figure>`;
 
-  // add element to document
+  // add element to document page
   containerCategory.insertAdjacentHTML('beforeend', ElColoringCard);
 
   // handle download button of element
@@ -87,7 +87,7 @@ const getRequiredData = async function (url, amount = 4) {
 };
 
 const loadMoreCard = async function () {
-  const requiredData = await getRequiredData('./../data/json/cartoon.json');
+  const requiredData = await getRequiredData(`./../data/json/${localStorage.getItem('category-name')}.json`);
   requiredData.forEach(data => createColoringCard(data));
   console.log(requiredData);
 };

@@ -1,0 +1,85 @@
+.coloring__card {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--first-color);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+.coloring__card-blob {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid var(--second-color);
+  margin-bottom: 0.5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coloring__card-img {
+  width: 100%;
+  transform: scale(1.1);
+}
+
+.coloring__card-caption{
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.coloring__card-detail {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--first-color);
+}
+
+.coloring__card-detail span {
+  font-size: .6rem;
+  font-weight: 500;
+  line-height: 30px;
+  border-radius: 0.5rem;
+  color: #333;
+  background-color: #efefef;
+}
+
+.coloring__card-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.coloring__card-buttons button {
+  width: 30px;
+  height: 30px;
+  margin-inline: 1px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn__download {
+  color: var(--white-color);
+  background-color: var(--first-color);
+  transition: all 0.1s;
+}
+
+.btn__download:hover {
+  color: var(--first-color);
+  background-color: var(--white-color);
+  border: 2px solid var(--first-color);
+}
+
+.btn__see {
+  color: var(--first-color);
+}
+
+.btn__like {
+  color: red;
+}

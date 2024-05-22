@@ -12,10 +12,11 @@ const categories = document.querySelectorAll('.category__item');
 
 categories.forEach(category =>
   category.addEventListener('click', function () {
-    window.location.href = './public/all-category.html';
+    window.location.href = './public/one-category.html';
   })
 );
 
 console.log(header.getBoundingClientRect().height);
 
 main.style.marginTop = header.getBoundingClientRect().height + 18 + 'px';
+

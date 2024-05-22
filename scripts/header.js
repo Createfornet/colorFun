@@ -1,29 +1,39 @@
+// this class is for header, navbar & search behavior
 export default class {
-  btnOpen = document.querySelector('.nav__open');
-  btnClose = document.querySelector('.nav__close');
+  btnOpenMenu = document.querySelector('.nav__open');
+  btnCloseMenu = document.querySelector('.nav__close');
   menu = document.querySelector('.nav__menu');
   overlay = document.querySelector('.overlay');
   inputSearch = document.querySelector('.header__search-input');
-  containerResault = document.querySelector('.header__resaults');
+  containerSearchSuggestion = document.querySelector('.header__resaults');
 
   constructor() {
-    this.btnOpen.addEventListener('click', this._open.bind(this));
-    this.btnClose.addEventListener('click', this._close.bind(this));
-    // prettier-ignore
-    this.inputSearch.addEventListener('keydown', this._showSuggestions.bind(this))
+    this._preset();
+    this.btnOpenMenu.addEventListener('click', this._openMenu.bind(this));
+    this.btnCloseMenu.addEventListener('click', this._closeMenu.bind(this));
+    this.inputSearch.addEventListener(
+      'keydown',
+      this._showSearchSuggestions.bind(this)
+    );
   }
 
-  _open() {
+  _preset() {
+    this._closeMenu();
+  }
+
+  _openMenu() {
     this.menu.classList.add('show-menu');
-    this.overlay.classList.remove('hidden');
+    this.overlay.classList.remove('overlay-hidden');
+    this.overlay.classList.add('overlay-show');
   }
 
-  _close() {
+  _closeMenu() {
     this.menu.classList.remove('show-menu');
-    this.overlay.classList.add('hidden');
+    this.overlay.classList.add('overlay-hidden');
+    this.overlay.classList.remove('overlay-show');
   }
 
-  async _getSuggestions(e) {
+  async _getSearchSuggestions(e) {
     try {
       const response = await fetch('./data/json/cartoon.json');
       console.log(response);
@@ -39,10 +49,10 @@ export default class {
     } catch (err) {}
   }
 
-  async _showSuggestions(e) {
-    this.containerResault.innerHTML = null;
+  async _showSearchSuggestions(e) {
+    this.containerSearchSuggestion.innerHTML = null;
 
-    const suggestions = await this._getSuggestions();
+    const suggestions = await this._getSearchSuggestions();
     console.log(suggestions);
     suggestions.forEach(suggestion => {
       console.log(this);
@@ -55,7 +65,10 @@ export default class {
           </p>
         </div>`;
 
-      this.containerResault.insertAdjacentHTML('beforeend', suggestionElement);
+      this.containerSearchSuggestion.insertAdjacentHTML(
+        'beforeend',
+        suggestionElement
+      );
     });
   }
 }

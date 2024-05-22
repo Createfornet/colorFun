@@ -46,12 +46,12 @@
   border: none;
   padding-inline: 5px;
   width: 100%;
-  color: blue;
 }
 
-::placeholder {
+.header__search-input::placeholder {
   color: var(--second-color);
   opacity: 0.5;
+  letter-spacing: 5px;
 }
 
 .search-icon,

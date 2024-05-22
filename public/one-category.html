@@ -22,20 +22,41 @@
       <img
         loading="lazy"
         class="header__logo"
-        src="./../assets/icon/colorFun.svg"
+        src="assets/icon/colorFun.svg"
         alt=""
       />
 
-      <div class="header__tools">
-        <div class="header__search">
-          <i class="ri-search-line"></i>
-          <input type="text" />
-          <i class="ri-mic-2-line"></i>
+      <div class="header__container">
+        <div class="header__tools">
+          <div class="header__search">
+            <div class="search-icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <input
+              class="header__search-input"
+              placeholder="search"
+              type="text"
+            />
+            <div class="mic-icon">
+              <i class="ri-mic-2-line"></i>
+            </div>
+          </div>
+
+          <button class="nav__open center">
+            <i class="ri-menu-line"></i>
+          </button>
         </div>
 
-        <button class="nav__open center">
-          <i class="ri-menu-line"></i>
-        </button>
+        <div class="header__resaults">
+          <!-- <div class="header__resault">
+            <div class="search-icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <p class="resault-text">
+              Kolobok
+            </p>
+          </div> -->
+        </div>
       </div>
     </header>
 

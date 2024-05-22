@@ -30,6 +30,7 @@ button {
   all: unset;
   box-sizing: border-box;
   cursor: pointer;
+  user-select: none;
 }
 
 input:focus {

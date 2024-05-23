@@ -102,7 +102,6 @@
 
 /*========================= Article ==========================*/
 .article__container {
-  /* height: 400px; */
   display: flex;
   align-items: flex-start;
   overflow-x: scroll;

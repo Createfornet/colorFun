@@ -2,10 +2,9 @@ import headerAndNav from './header.js';
 import coloringCard from './coloring-card.js';
 import article from './section-article.js';
 import categoryCard from './category-card.js';
-import footer from './footer.js'
+import footer from './footer.js';
 
 // DOM Elements
-const main = document.querySelector('.main');
 const containerPopular = document.querySelector('.popular__container');
 
 // about first section of page => popular and new coloring pages
@@ -17,16 +16,20 @@ const completePopularSection = function () {
   };
 
   const getAllColoringData = async function () {
-    const response = await Promise.all([
-      getColoringData('./data/json/animal.json'),
-      getColoringData('./data/json/cartoon.json'),
-      getColoringData('./data/json/coffee.json'),
-      getColoringData('./data/json/dreamcatcher.json'),
-      getColoringData('./data/json/geometric.json'),
-      getColoringData('./data/json/marvel.json'),
-      getColoringData('./data/json/nature.json'),
-      getColoringData('./data/json/game.json'),
-    ]);
+    const allCategory = [
+      'animal',
+      'cartoon',
+      'coffee',
+      'dreamcatcher',
+      'geometric',
+      'marvel',
+      'nature',
+      'game',
+    ];
+    const allJsonData = allCategory.map(category =>
+      getColoringData(`./data/json/${category}.json`)
+    );
+    const response = await Promise.all(allJsonData);
     return response.flat();
   };
 
@@ -41,7 +44,6 @@ const completePopularSection = function () {
 
   const addPopularCardsToPage = async function (number) {
     const popularColoringData = await getPopularColoringData(number);
-    console.log(popularColoringData);
     popularColoringData.forEach(
       coloringData => new coloringCard(coloringData, containerPopular)
     );
@@ -51,16 +53,13 @@ const completePopularSection = function () {
   addPopularCardsToPage(8);
 };
 
-
-// mondaymandala
-
 const containerCategory = document.querySelector('.category__container');
 
+// handle logic when user select a category
 containerCategory.addEventListener('click', function (e) {
   const categoryEl = e.target.closest('.category__item');
   if (!categoryEl) return;
   const categoryName = categoryEl.dataset.category;
-  console.log(categoryName);
   localStorage.setItem('category-name', categoryName);
   window.location.href = './public/category.html';
 });
@@ -70,4 +69,4 @@ completePopularSection();
 new article();
 new categoryCard('childrens', ['cartoon', 'nature', 'game', 'animal']);
 new categoryCard('adults', ['geometric', 'dreamcatcher', 'marvel', 'coffee']);
-new footer()
+new footer();

@@ -2,6 +2,18 @@
 export default class {
   header = document.querySelector('.header');
   nav = document.querySelector('.nav');
+
+  // need for find suggestions
+  allCategory = [
+    'animal',
+    'cartoon',
+    'coffee',
+    'dreamcatcher',
+    'geometric',
+    'marvel',
+    'nature',
+    'game',
+  ];
   constructor(homePage = true) {
     this.homePage = homePage;
     this.srcCorrectio = this.homePage ? '' : '../';
@@ -10,16 +22,37 @@ export default class {
     this.btnOpenMenu = document.querySelector('.nav__open');
     this.btnCloseMenu = document.querySelector('.nav__close');
     this.menu = document.querySelector('.nav__menu');
+    this.inpSearch = document.querySelector('.header__search-input');
+    this.searchField = document.querySelector('.header__search')
+    this.iconSearch = document.querySelector('.search-icon')
+    this.iconMic = document.querySelector('.mic-icon')
     this.overlay = document.querySelector('.overlay');
     this.inputSearch = document.querySelector('.header__search-input');
-    this.containerSearchSuggestion =
-      document.querySelector('.header__resaults');
+    this.containerSearchSuggestion = document.querySelector(
+      '.suggestions__container'
+    );
     this._preset();
+
+    // event listeners
     this.btnOpenMenu.addEventListener('click', this._openMenu.bind(this));
     this.btnCloseMenu.addEventListener('click', this._closeMenu.bind(this));
+    this.overlay.addEventListener('click', this._closeMenu.bind(this));
+    this.inpSearch.addEventListener(
+      'focus',
+      this._sweetchToFocusedStyle.bind(this)
+    );
+    this.inpSearch.addEventListener(
+      'blur',
+      this._sweetchToBluredStyle.bind(this)
+    );
     this.inputSearch.addEventListener(
       'keydown',
       this._showSearchSuggestions.bind(this)
+    );
+    //when user sect a suggestion
+    this.containerSearchSuggestion.addEventListener(
+      'click',
+      this._showSuggestionContent.bind(this)
     );
   }
 
@@ -52,7 +85,7 @@ export default class {
         </button>
       </div>
 
-      <div class="header__resaults">
+      <div class="suggestions__container">
         <!-- search resaults added by JS (header.js) -->
       </div>
     </div>`;
@@ -111,6 +144,17 @@ export default class {
     </div>`;
   }
 
+  _createSuggestionEl(data) {
+    return `<div class="suggestion__item" data-id="${data.id}">
+            <div class="search-icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <p class="suggestion-text">
+              ${data.title}
+            </p>
+          </div>`;
+  }
+
   _addHeaderAndNavToPage() {
     this.header.insertAdjacentHTML('afterbegin', this._createHeaderEl());
     this.nav.insertAdjacentHTML('afterbegin', this._createNavEl());
@@ -132,42 +176,74 @@ export default class {
     this.overlay.classList.remove('overlay-show');
   }
 
-  async _getSearchSuggestions(e) {
+  _sweetchToFocusedStyle(){
+    this.searchField.classList.add('header__search-focused')
+    this.iconSearch.classList.add('icon-focused')
+    this.iconMic.classList.add('icon-focused')
+  }
+
+  _sweetchToBluredStyle(){
+    this.searchField.classList.remove('header__search-focused')
+    this.iconSearch.classList.remove('icon-focused')
+    this.iconMic.classList.remove('icon-focused')
+  }
+
+  async _getSearchSuggestions() {
     try {
-      const response = await fetch('./data/json/cartoon.json');
-      console.log(response);
-      const data = await response.json();
-      console.log(data);
+      const allData = await this._getAllColoringData();
       const suggestions = this.inputSearch.value
-        ? data.filter(data =>
-            data.title.toLowerCase().includes(this.inputSearch.value)
+        ? allData.filter(data =>
+            data.title
+              .toLowerCase()
+              .includes(this.inputSearch.value.toLowerCase())
           )
         : [];
-      console.log(suggestions);
       return suggestions;
     } catch (err) {}
   }
 
   async _showSearchSuggestions(e) {
+    // clear last search suggestions
     this.containerSearchSuggestion.innerHTML = null;
 
-    const suggestions = await this._getSearchSuggestions();
-    console.log(suggestions);
-    suggestions.forEach(suggestion => {
-      console.log(this);
-      const suggestionElement = `<div class="header__resault" data-id="${suggestion.id}">
-          <div class="search-icon">
-            <i class="ri-search-line"></i>
-          </div>
-          <p class="resault-text">
-            ${suggestion.title}
-          </p>
-        </div>`;
+    // find search suggestions data
+    const suggestionsData = await this._getSearchSuggestions();
 
+    // add search suggestions to their container to see
+    suggestionsData.forEach(data => {
       this.containerSearchSuggestion.insertAdjacentHTML(
         'beforeend',
-        suggestionElement
+        this._createSuggestionEl(data)
       );
     });
   }
+
+  async _getColoringData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  }
+
+  async _getAllColoringData() {
+    const allJsonFiles = this.allCategory.map(category =>
+      this._getColoringData(`./data/json/${category}.json`)
+    );
+    const allColoringData = await Promise.all(allJsonFiles);
+    return allColoringData.flat();
+  }
+
+  async _showSuggestionContent(e) {
+    const desiredColoring = e.target.closest('.suggestion__item');
+    if (!desiredColoring) return;
+
+    const desiredColoringId = desiredColoring.dataset.id;
+    console.log(desiredColoringId);
+    const allColoringData = await this._getAllColoringData();
+    const selectedSuggestion = allColoringData.find(
+      data => data.id === desiredColoringId
+    );
+    console.log(selectedSuggestion);
+  }
 }
+
+// The desired tree

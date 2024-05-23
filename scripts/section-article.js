@@ -26,8 +26,6 @@ export default class {
 
   constructor() {
     this._addArticlesToPage();
-    console.log(this.containerArticle);
-
   }
   _addArticlesToPage() {
     for (let i = 0; i < this.articleNumber; i++) {

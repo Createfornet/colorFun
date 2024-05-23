@@ -11,11 +11,6 @@
   margin-inline: auto;
 }
 
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
 .center {
   display: flex;
   justify-content: center;
@@ -50,6 +45,10 @@
 }
 
 /*  ================== Category ===================  */
+.category__title{
+  color: var(--first-color);
+  padding-block: .5rem;
+}
 .category__content {
   padding-top: 3rem;
   display: grid;

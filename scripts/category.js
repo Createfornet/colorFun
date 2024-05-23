@@ -6,9 +6,6 @@ new headerBehavior()
 // DOM Elements
 const header = document.querySelector('.header');
 const main = document.querySelector('.main');
-const btnsDownload = document.querySelectorAll('.btn__download');
-const btnsSee = document.querySelectorAll('.btn__see');
-const btnsLike = document.querySelectorAll('.btn__like');
 const btnLoad = document.querySelector('.category__load');
 
 const containerCategory = document.querySelector('.category__content');

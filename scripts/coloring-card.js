@@ -1,6 +1,14 @@
+// this class will be create & add one instance of coloring card
 export default class {
-  constructor(data, containerColoringCards, homePage) {
-    this.createColoringCard(data, containerColoringCards, homePage);
+  constructor(data, containerColoringCards, homePage = true) {
+    this.data = data;
+    this.containerColoringCards = containerColoringCards;
+    this.homePage = homePage;
+    this.imageSrc = `./${this.homePage ? '' : '../'}data/image/${
+      data.name
+    }.jpg`;
+
+    this.addColoringCard(data, containerColoringCards);
   }
 
   // download function$
@@ -11,17 +19,15 @@ export default class {
     link.click();
   }
 
-  createColoringCard(data, containerColoringCards, homePage = true) {
-    // create element of coloring card
-    // prettier-ignore
-    const ElColoringCard = 
-    `<figure class="coloring__card" data-id ="${data.id}">
+  // create html element of coloring card
+  createColoringCardEl() {
+    return `<figure class="coloring__card" data-id ="${this.data.id}">
       <div class="coloring__card-blob">
-        <img class="coloring__card-img" src="./${homePage ? '' : '../'}data/image/${data.name}.jpg" alt="" />
+        <img class="coloring__card-img" src=${this.imageSrc} alt="" />
       </div>
   
       <div class="coloring__card-detail">
-        <span>${data.download} <i class="ri-download-line"></i></span>
+        <span>${this.data.download} <i class="ri-download-line"></i></span>
         <div class="coloring__card-buttons">
           <button title="download" class="btn__download">
             <i class="ri-arrow-down-line"></i>
@@ -36,24 +42,31 @@ export default class {
           </button>
         </div>
       </div>
-      <figcaption class="coloring__card-caption">${data.title}</figcaption>
+      <figcaption class="coloring__card-caption">${this.data.title}</figcaption>
     </figure>`;
+  }
 
-    // add element to document page
-    containerColoringCards.insertAdjacentHTML('beforeend', ElColoringCard);
+  // get last btn like or last btn download
+  _getLastBtn(type) {
+    return [
+      ...this.containerColoringCards.querySelectorAll(`.btn__${type}`),
+    ].at(-1);
+  }
+
+  // add a coloring card in the container (at docunent page)
+  addColoringCard(data, containerColoringCards) {
+    const ColoringCardEl = this.createColoringCardEl();
+
+    // add element to coloring card container at the page
+    containerColoringCards.insertAdjacentHTML('beforeend', ColoringCardEl);
 
     // handle download button of element
-    const btnDownload = [...document.querySelectorAll('.btn__download')].at(-1);
-    btnDownload.addEventListener('click', () =>
-      this._downloadURL(
-        `./${homePage ? '' : '../'}data/image/${data.name}.jpg`,
-        data.title
-      )
+    this._getLastBtn('download').addEventListener('click', () =>
+      this._downloadURL(this.imageSrc, this.data.title)
     );
 
     // handle like reaction
-    const btnLike = [...document.querySelectorAll('.btn__like')].at(-1);
-    btnLike.addEventListener('click', function (e) {
+    this._getLastBtn('like').addEventListener('click', function (e) {
       this.querySelector('i').className = 'ri-heart-3-fill';
     });
   }

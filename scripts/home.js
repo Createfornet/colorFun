@@ -1,14 +1,13 @@
-import headerBehavior from './header.js';
+import headerAndNav from './header.js';
 import coloringCard from './coloring-card.js';
 import article from './section-article.js';
-import categoryCard from './category-card.js'
-
+import categoryCard from './category-card.js';
 
 // DOM Elements
-const header = document.querySelector('.header');
 const main = document.querySelector('.main');
 const containerPopular = document.querySelector('.popular__container');
 
+// about first section of page => popular and new coloring pages
 const completePopularSection = function () {
   const getColoringData = async function (url) {
     const response = await fetch(url);
@@ -51,7 +50,7 @@ const completePopularSection = function () {
   addPopularCardsToPage(8);
 };
 
-main.style.marginTop = header.getBoundingClientRect().height + 'px';
+main.style.marginTop = 70 + 'px';
 
 // mondaymandala
 
@@ -66,11 +65,8 @@ containerCategory.addEventListener('click', function (e) {
   window.location.href = './public/category.html';
 });
 
-
-
-
-new headerBehavior();
-completePopularSection()
+new headerAndNav();
+completePopularSection();
 new article();
-new categoryCard('childrens', ['cartoon', 'nature', 'game', 'animal'])
-new categoryCard('adults', ['geometric', 'dreamcatcher', 'marvel', 'coffee'])
+new categoryCard('childrens', ['cartoon', 'nature', 'game', 'animal']);
+new categoryCard('adults', ['geometric', 'dreamcatcher', 'marvel', 'coffee']);

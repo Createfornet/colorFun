@@ -1,13 +1,18 @@
 // this class is for header, navbar & search behavior
 export default class {
-  btnOpenMenu = document.querySelector('.nav__open');
-  btnCloseMenu = document.querySelector('.nav__close');
-  menu = document.querySelector('.nav__menu');
-  overlay = document.querySelector('.overlay');
-  inputSearch = document.querySelector('.header__search-input');
-  containerSearchSuggestion = document.querySelector('.header__resaults');
-
-  constructor() {
+  header = document.querySelector('.header');
+  nav = document.querySelector('.nav');
+  constructor(homePage = true) {
+    this.homePage = homePage;
+    this.logoSrc = `./${this.homePage ? '' : '../'}assets/icon/colorFun.svg`;
+    this._addHeaderAndNavToPage();
+    this.btnOpenMenu = document.querySelector('.nav__open');
+    this.btnCloseMenu = document.querySelector('.nav__close');
+    this.menu = document.querySelector('.nav__menu');
+    this.overlay = document.querySelector('.overlay');
+    this.inputSearch = document.querySelector('.header__search-input');
+    this.containerSearchSuggestion =
+      document.querySelector('.header__resaults');
     this._preset();
     this.btnOpenMenu.addEventListener('click', this._openMenu.bind(this));
     this.btnCloseMenu.addEventListener('click', this._closeMenu.bind(this));
@@ -15,6 +20,99 @@ export default class {
       'keydown',
       this._showSearchSuggestions.bind(this)
     );
+  }
+
+  _createHeaderEl() {
+    return `<img
+      loading="lazy"
+      class="header__logo"
+      src=${this.logoSrc}
+      alt=""
+    />
+
+    <div class="header__container">
+      <div class="header__tools">
+        <div class="header__search">
+          <div class="search-icon">
+            <i class="ri-search-line"></i>
+          </div>
+          <input
+            class="header__search-input"
+            placeholder="search"
+            type="text"
+          />
+          <div class="mic-icon">
+            <i class="ri-mic-2-line"></i>
+          </div>
+        </div>
+
+        <button class="nav__open center">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+
+      <div class="header__resaults">
+        <!-- search resaults added by JS (header.js) -->
+      </div>
+    </div>`;
+  }
+
+  _createNavEl() {
+    return `<div class="nav__menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >Blog <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >For childrens <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >For adults <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >Holidays <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >Interests <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >Educational <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link"
+            >Contacts <i class="ri-arrow-down-s-line"></i
+          ></a>
+        </li>
+      </ul>
+
+      <!-- btn close -->
+      <button class="nav__close center">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>`;
+  }
+
+  _addHeaderAndNavToPage() {
+    this.header.insertAdjacentHTML('afterbegin', this._createHeaderEl());
+    this.nav.insertAdjacentHTML('afterbegin', this._createNavEl());
   }
 
   _preset() {

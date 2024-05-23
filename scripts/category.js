@@ -1,6 +1,6 @@
-import headerBehavior from './header.js'
+import headerAndNav from './header.js'
 
-new headerBehavior()
+new headerAndNav(false)
 
 
 // DOM Elements

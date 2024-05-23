@@ -10,7 +10,7 @@ export default class {
 
   _createCategoryContentEl() {
     return `<div class="category__content">
-    <h3 class="category__title">For ${this.ages}</h3>
+    <h3 class="category__title" id="${this.ages}">For ${this.ages}</h3>
     <div class="category__info">
     </div>
   </div>`;

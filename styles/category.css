@@ -2,6 +2,8 @@
 @import './base.css';
 @import './header&nav.css';
 @import './coloring-card.css';
+@import './footer.css';
+@import './overlay.css';
 
 /*  =============== Reusable CSS Classes ================  */
 .container {
@@ -54,37 +56,13 @@
   gap: 1rem;
 }
 
-
-
 .category__load {
   width: 100%;
   margin-top: 10px;
   text-align: center;
   font-size: 1.5rem;
-  padding-block: .5rem;
+  padding-block: 0.5rem;
   border-radius: 1rem;
   background-color: var(--first-color);
   color: var(--white-color);
-}
-
-/*========================= overlay ==========================*/
-.overlay{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--overlay-color);
-  z-index: 30;
-}
-
-.overlay-hidden{
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform .5s, opacity .5s;
-}
-
-.overlay-show{
-  opacity: 1;
-  transform: translateX(0);
-  transition: transform .5s, opacity .5s;
 }

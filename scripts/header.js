@@ -4,7 +4,8 @@ export default class {
   nav = document.querySelector('.nav');
   constructor(homePage = true) {
     this.homePage = homePage;
-    this.logoSrc = `./${this.homePage ? '' : '../'}assets/icon/colorFun.svg`;
+    this.srcCorrectio = this.homePage ? '' : '../';
+    this.srcLogo = `./${this.srcCorrectio}assets/icon/colorFun.svg`;
     this._addHeaderAndNavToPage();
     this.btnOpenMenu = document.querySelector('.nav__open');
     this.btnCloseMenu = document.querySelector('.nav__close');
@@ -26,7 +27,7 @@ export default class {
     return `<img
       loading="lazy"
       class="header__logo"
-      src=${this.logoSrc}
+      src=${this.srcLogo}
       alt=""
     />
 

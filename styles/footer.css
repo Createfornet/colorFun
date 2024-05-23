@@ -1,0 +1,36 @@
+/*========================= Footer ==========================*/
+.footer {
+  background-color: var(--body-color);
+}
+
+.footer__shape{
+  height: 80px;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  color: var(--white-color);
+  background-color: var(--white-color);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 1rem;
+}
+
+.footer__content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.footer__content > img {
+  width: 100%;
+}
+
+.footer__copy {
+  font-size: var(--tiny-font-size);
+  letter-spacing: 2px;
+}
+
+.footer__note {
+  font-size: var(--small-font-size);
+}

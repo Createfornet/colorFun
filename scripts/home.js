@@ -2,6 +2,7 @@ import headerAndNav from './header.js';
 import coloringCard from './coloring-card.js';
 import article from './section-article.js';
 import categoryCard from './category-card.js';
+import footer from './footer.js'
 
 // DOM Elements
 const main = document.querySelector('.main');
@@ -70,3 +71,4 @@ completePopularSection();
 new article();
 new categoryCard('childrens', ['cartoon', 'nature', 'game', 'animal']);
 new categoryCard('adults', ['geometric', 'dreamcatcher', 'marvel', 'coffee']);
+new footer()

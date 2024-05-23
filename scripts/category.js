@@ -1,6 +1,8 @@
 import headerAndNav from './header.js'
+import footer from './footer.js'
 
 new headerAndNav(false)
+new footer(false)
 
 
 // DOM Elements

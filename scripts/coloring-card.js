@@ -55,10 +55,10 @@ export default class {
 
   // add a coloring card in the container (at docunent page)
   addColoringCard(data, containerColoringCards) {
-    const ColoringCardEl = this.createColoringCardEl();
+    const coloringCardEl = this.createColoringCardEl();
 
     // add element to coloring card container at the page
-    containerColoringCards.insertAdjacentHTML('beforeend', ColoringCardEl);
+    containerColoringCards.insertAdjacentHTML('beforeend', coloringCardEl);
 
     // handle download button of element
     this._getLastBtn('download').addEventListener('click', () =>
@@ -67,7 +67,10 @@ export default class {
 
     // handle like reaction
     this._getLastBtn('like').addEventListener('click', function (e) {
-      this.querySelector('i').className = 'ri-heart-3-fill';
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('ri-heart-3-line'))
+        icon.className = 'ri-heart-3-fill';
+      else icon.className = 'ri-heart-3-line';
     });
   }
 }

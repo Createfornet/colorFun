@@ -46,23 +46,34 @@
 
 .main {
   overflow: hidden;
+  margin-top: 4rem;
 }
 
 /*  ================== Category ===================  */
 .category__content {
   padding-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
 .category__load {
   width: 100%;
-  margin-top: 10px;
+  display: block;
+  max-width: 700px;
+  margin-inline: auto;
+  margin-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
   padding-block: 0.5rem;
   border-radius: 1rem;
   background-color: var(--first-color);
   color: var(--white-color);
+}
+
+/*  ================== Responsive ===================  */
+@media screen and (min-width: 768px) {
+  .category__content{
+  grid-template-columns: repeat(4, 1fr);
+  }
 }

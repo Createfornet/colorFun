@@ -46,6 +46,7 @@
 
 .main {
   overflow: hidden;
+  margin-top: 4rem;
 }
 
 /*========================= Popular ==========================*/
@@ -73,17 +74,17 @@
   overflow: hidden;
 }
 
-.popular__blob{
+.popular__blob {
   width: 90%;
   aspect-ratio: 1;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 1rem;
   display: flex;
   justify-content: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-.popular__blob img{
+.popular__blob img {
   height: 100%;
 }
 
@@ -101,7 +102,7 @@
 
 /*========================= Article ==========================*/
 .article__container {
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   align-items: flex-start;
   overflow-x: scroll;
@@ -118,12 +119,12 @@
   flex-flow: column wrap;
   background-color: var(--body-color);
   padding-bottom: 1rem;
-  border-radius: 3rem 3rem .5rem .5rem;
+  border-radius: 3rem 3rem 0.5rem 0.5rem;
 }
 
-.article__blob{
+.article__blob {
   width: 100%;
-  aspect-ratio: 1.8 ;
+  aspect-ratio: 1.8;
   margin-bottom: 0.8rem;
   border-radius: 3rem;
   display: flex;
@@ -136,8 +137,8 @@
 }
 
 .article__title,
-.article__subtitle{
-  padding-inline: .5rem;
+.article__subtitle {
+  padding-inline: 0.5rem;
 }
 .article__title {
   font-size: var(--normal-font-size);
@@ -225,7 +226,7 @@
   text-transform: capitalize;
 }
 
-.category__blob{
+.category__blob {
   border: 2px solid var(--first-color);
   border-radius: 2rem;
   overflow: hidden;
@@ -240,4 +241,31 @@
 .category__blob img {
   flex: 1 100%;
   height: 100%;
+}
+
+/*======================== Responsive =========================*/
+@media screen and (min-width: 768px) {
+  .article__data {
+    flex: 0 0 60%;
+  }
+
+  .popular__container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .category__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .article__data {
+    flex: 0 0 40%;
+  }
+
+  .popular__container {
+    gap: 2rem;
+  }
 }

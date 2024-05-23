@@ -51,7 +51,6 @@ const completePopularSection = function () {
   addPopularCardsToPage(8);
 };
 
-main.style.marginTop = 70 + 'px';
 
 // mondaymandala
 

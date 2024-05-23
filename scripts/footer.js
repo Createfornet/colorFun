@@ -12,7 +12,7 @@ export default class {
     return `<div class="footer__shape"></div>
       <div class="footer__container section">
         <div class="footer__content">
-          <img loading="lazy" src=${this.srcMainLogo} alt="" />
+          <img class="footer__logo" loading="lazy" src=${this.srcMainLogo} alt="" />
           <p class="footer__copy">© 2024 ColorFun.ru</p>
           <div class="footer__social">
             <img loading="lazy" src=${this.srcTelLogo} alt="" />

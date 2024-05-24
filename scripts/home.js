@@ -55,13 +55,13 @@ const completePopularSection = function () {
 
 const containerCategory = document.querySelector('.category__container');
 
-// handle logic when user select a category
+// handle logic when user select a category to transfor category-page.html
 containerCategory.addEventListener('click', function (e) {
   const categoryEl = e.target.closest('.category__item');
   if (!categoryEl) return;
   const categoryName = categoryEl.dataset.category;
   localStorage.setItem('category-name', categoryName);
-  window.location.href = './public/category.html';
+  window.location.href = './public/category-page.html';
 });
 
 new headerAndNav();

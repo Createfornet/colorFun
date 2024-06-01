@@ -55,7 +55,7 @@ const completePopularSection = function () {
 
 const containerCategory = document.querySelector('.category__container');
 
-// handle logic when user select a category to transfor category-page.html
+// handle logic when user select a category to transfer category-page.html
 containerCategory.addEventListener('click', function (e) {
   const categoryEl = e.target.closest('.category__item');
   if (!categoryEl) return;

@@ -30,15 +30,15 @@ export default class {
         <span>${this.data.download} <i class="ri-download-line"></i></span>
         <div class="coloring__card-buttons">
           <button title="download" class="btn__download">
-            <i class="ri-arrow-down-line"></i>
+            <i class="ri-arrow-down-line"></i><span class="hidden">download</span>
           </button>
   
           <button title="see" class="btn__see">
-            <i class="ri-eye-line"></i>
+            <i class="ri-eye-line"></i><span class="hidden">see</span>
           </button>
   
           <button title="like" class="btn__like">
-            <i class="ri-heart-3-line"></i>
+            <i class="ri-heart-3-line"></i><span class="hidden">like</span>
           </button>
         </div>
       </div>

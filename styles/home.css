@@ -242,8 +242,156 @@
   height: 100%;
 }
 
+/*========================= Contact ==========================*/
+.contact__list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.contact__item {
+  width: 90%;
+  border: 1px solid;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid;
+  position: relative;
+  transition: all 1s 1s;
+}
+
+.telegram {
+  color: #2aabee;
+  border-color: #2aabee;
+}
+
+.github {
+  color: #000;
+  border-color: #000;
+}
+
+.linkedin {
+  color: #0762c8;
+  border-color: #0762c8;
+}
+
+/* animation */
+.contact__item:before,
+.contact__item:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: palegreen;
+  border-radius: 50%;
+  z-index: -2;
+  transform: translate(0, -50%);
+  transition: all 1s;
+  opacity: 0;
+}
+
+.contact__item:before {
+  left: 0;
+}
+
+.contact__item:after {
+  right: 0;
+}
+
+.telegram:before,
+.telegram:after {
+  background-color: #2aabee;
+}
+
+.telegram:before {
+  box-shadow: -100px 0 #2aabee;
+}
+
+.telegram:after {
+  box-shadow: 100px 0 #2aabee;
+}
+
+.github:before,
+.github:after {
+  background-color: #000;
+}
+
+.github:before {
+  box-shadow: -100px 0 #000;
+}
+
+.github:after {
+  box-shadow: 100px 0 #000;
+}
+
+.linkedin:before,
+.linkedin:after {
+  background-color: #0762c8;
+}
+
+.linkedin:before {
+  box-shadow: -100px 0 #0762c8;
+}
+
+.linkedin:after {
+  box-shadow: 100px 0 #0762c8;
+}
+
+.contact__item .bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 1s 0.5s cubic-bezier(0.79, -0.71, 0.26, 1.63);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.telegram .bg {
+  color: #000;
+  background-color: #2aabee;
+}
+
+.github .bg {
+  color: #fff;
+  background-color: #000;
+}
+
+.linkedin .bg {
+  color: #fff;
+  background-color: #0762c8;
+}
+
+.contact__item:hover:before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 100px 0;
+  opacity: 1;
+}
+
+.contact__item:hover:after {
+  right: 50%;
+  transform: translate(50%, -50%);
+  box-shadow: -100px 0;
+  opacity: 1;
+}
+
+.contact__item:hover .bg {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 /*======================== Responsive =========================*/
 @media screen and (min-width: 768px) {
+  .main {
+    margin-top: 1rem;
+  }
+
   .article__data {
     flex: 0 0 60%;
   }

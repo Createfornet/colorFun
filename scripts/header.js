@@ -19,6 +19,8 @@ export default class {
     this.srcCorrectio = this.homePage ? '' : '../';
     this.srcLogo = `./${this.srcCorrectio}assets/icon/colorFun.svg`;
     this._addHeaderAndNavToPage();
+
+    // ___________ elements _____________
     this.btnOpenMenu = document.querySelector('.nav__open');
     this.btnCloseMenu = document.querySelector('.nav__close');
     this.menu = document.querySelector('.nav__menu');
@@ -31,9 +33,9 @@ export default class {
     this.containerSearchSuggestion = document.querySelector(
       '.suggestions__container'
     );
-    this._preset();
+    // this._preset();
 
-    // event listeners
+    // ___________ event listeners ___________
     this.btnOpenMenu.addEventListener('click', this._openMenu.bind(this));
     this.btnCloseMenu.addEventListener('click', this._closeMenu.bind(this));
     this.overlay.addEventListener('click', this._closeMenu.bind(this));
